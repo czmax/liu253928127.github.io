@@ -92,3 +92,5 @@ hexo g
 ```
 hexo d
 ```
+
+6. 访问`http://xxx.github.io`就能看到刚刚本地部署的静态网页
