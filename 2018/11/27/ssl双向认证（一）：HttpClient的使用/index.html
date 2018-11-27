@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee | Hexo</title>
-  <meta name="description" content="上一节介绍了如何发布静态网页到github，但考虑到国内网速原因，想同时时间github和gitee多个托管网站，方便访问  同时发布到github和gitee上一篇已经介绍如何发布到github，这里先介绍新建gitee项目  在gitee上创建名为xxx的项目（与github有所区别），xxx为自己的gitee用户名  设置项目的类型为JavaScript  配置deploy多个源,官方的格">
-<meta name="keywords" content="hexo">
+  <title>ssl双向认证（一）：HttpClient的使用 | Hexo</title>
+  <meta name="description" content="HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包。它相比传统的 HttpURLConnection，增加了易用性和灵活性，它不仅让客户端发送 HTTP 请求变得更容易，而且也方便了开发人员测试接口（基于 HTTP 协议的），即提高了开发的效率，也方便提高代码的健壮性。  这里对HttpCli">
+<meta name="keywords" content="httpclient,ssl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee">
-<meta property="og:url" content="http://yoursite.com/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/index.html">
+<meta property="og:title" content="ssl双向认证（一）：HttpClient的使用">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/ssl双向认证（一）：HttpClient的使用/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="上一节介绍了如何发布静态网页到github，但考虑到国内网速原因，想同时时间github和gitee多个托管网站，方便访问  同时发布到github和gitee上一篇已经介绍如何发布到github，这里先介绍新建gitee项目  在gitee上创建名为xxx的项目（与github有所区别），xxx为自己的gitee用户名  设置项目的类型为JavaScript  配置deploy多个源,官方的格">
+<meta property="og:description" content="HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包。它相比传统的 HttpURLConnection，增加了易用性和灵活性，它不仅让客户端发送 HTTP 请求变得更容易，而且也方便了开发人员测试接口（基于 HTTP 协议的），即提高了开发的效率，也方便提高代码的健壮性。  这里对HttpCli">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T09:15:23.208Z">
+<meta property="og:updated_time" content="2018-11-27T13:33:03.106Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee">
-<meta name="twitter:description" content="上一节介绍了如何发布静态网页到github，但考虑到国内网速原因，想同时时间github和gitee多个托管网站，方便访问  同时发布到github和gitee上一篇已经介绍如何发布到github，这里先介绍新建gitee项目  在gitee上创建名为xxx的项目（与github有所区别），xxx为自己的gitee用户名  设置项目的类型为JavaScript  配置deploy多个源,官方的格">
+<meta name="twitter:title" content="ssl双向认证（一）：HttpClient的使用">
+<meta name="twitter:description" content="HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包。它相比传统的 HttpURLConnection，增加了易用性和灵活性，它不仅让客户端发送 HTTP 请求变得更容易，而且也方便了开发人员测试接口（基于 HTTP 协议的），即提高了开发的效率，也方便提高代码的健壮性。  这里对HttpCli">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/index.html">
+  <link rel="canonical" href="http://yoursite.com/2018/11/27/ssl双向认证（一）：HttpClient的使用/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -336,14 +336,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="post-ssl双向认证（一）：HttpClient的使用" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee
+      ssl双向认证（一）：HttpClient的使用
     </h1>
   
 
@@ -351,57 +351,49 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/" class="article-date">
-	  <time datetime="2018-11-25T08:46:48.000Z" itemprop="datePublished">2018-11-25</time>
+	<a href="/2018/11/27/ssl双向认证（一）：HttpClient的使用/" class="article-date">
+	  <time datetime="2018-11-27T12:52:31.000Z" itemprop="datePublished">2018-11-27</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/环境/">环境</a>
+    <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/java/">java</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/hexo/">hexo</a>
+	<a class="article-tag-link" href="/tags/httpclient/">httpclient</a>, <a class="article-tag-link" href="/tags/ssl/">ssl</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/27/ssl双向认证（一）：HttpClient的使用/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <blockquote>
-<p>上一节介绍了如何发布静态网页到github，但考虑到国内网速原因，想同时时间github和gitee多个托管网站，方便访问</p>
+<p>HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包。它相比传统的 HttpURLConnection，增加了易用性和灵活性，它不仅让客户端发送 HTTP 请求变得更容易，而且也方便了开发人员测试接口（基于 HTTP 协议的），即提高了开发的效率，也方便提高代码的健壮性。</p>
 </blockquote>
-<h3 id="同时发布到github和gitee"><a href="#同时发布到github和gitee" class="headerlink" title="同时发布到github和gitee"></a>同时发布到github和gitee</h3><p>上一篇已经介绍如何发布到<code>github</code>，这里先介绍新建<code>gitee</code>项目</p>
-<ol>
-<li><p>在<code>gitee</code>上创建名为<code>xxx</code>的项目（与github有所区别），<code>xxx</code>为自己的<code>gitee</code>用户名</p>
-</li>
-<li><p>设置项目的类型为<code>JavaScript</code></p>
-</li>
-<li><p>配置<code>deploy</code>多个源,官方的格式是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 官方的格式</span><br><span class="line"># deploy:</span><br><span class="line">#   type: git</span><br><span class="line">#   message: [message]</span><br><span class="line">#   repo:</span><br><span class="line">#     github: &lt;repository url&gt;,[branch]</span><br><span class="line">#     gitcafe: &lt;repository url&gt;,[branch]</span><br><span class="line"></span><br><span class="line"># 我的配置</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:liu253928127/liu253928127.github.io.git,master</span><br><span class="line">    gitee: git@gitee.com:liu253928127/liu253928127.git,master</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="将hexo提交到github，实现多台电脑使用"><a href="#将hexo提交到github，实现多台电脑使用" class="headerlink" title="将hexo提交到github，实现多台电脑使用"></a>将hexo提交到github，实现多台电脑使用</h3><ol>
-<li><p>在本地创建分支<code>hexo</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看分支状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地<code>commit</code>后，提交本地分支到远程分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;hexo博客&quot;</span><br><span class="line">git remote add origin git@github.com:liu253928127/liu253928127.github.io.git</span><br><span class="line">git push -u origin hexo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有可能发布后样式加载不出来，一般是css路径访问不对，所以在gitee创建项目的时候按照固定格式来最好</p>
-</li>
-</ol>
+<p>这里对<code>HttpClient</code>做简单的使用，目的是利用它来解决双向认证的问题。</p>
+<h3 id="使用-HttpClient-发送-HTTP-请求"><a href="#使用-HttpClient-发送-HTTP-请求" class="headerlink" title="使用 HttpClient 发送 HTTP 请求"></a>使用 HttpClient 发送 HTTP 请求</h3><h4 id="GET请求-amp-POST请求"><a href="#GET请求-amp-POST请求" class="headerlink" title="GET请求&amp;POST请求"></a>GET请求&amp;POST请求</h4><p><code>HttpClient</code>对每一种<code>Http</code>方法都准备了一个类，<code>Get</code>请求使用<code>HttpGet</code>类，<code>Post</code>请求使用<code>HttpPost</code>类</p>
+<blockquote>
+<p>模拟Http Get请求</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// httpclient 4.3版本后使用HttpClients来实例化</span></span><br><span class="line">CloseableHttpClient httpclient = HttpClients.createDefault();</span><br><span class="line">HttpGet request = <span class="keyword">new</span> HttpGet(url);</span><br><span class="line">CloseableHttpResponse response = httpclient.execute(request);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// read response</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>模拟Http Post请求</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String parameter = <span class="string">"key=value"</span>;</span><br><span class="line">HttpPost request = <span class="keyword">new</span> HttpPost(url);</span><br><span class="line">request.setEntity(</span><br><span class="line">    <span class="keyword">new</span> StringEntity(parameter, ContentType.create(<span class="string">"application/x-www-form-urlencoded"</span>))</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>读取响应</p>
+</blockquote>
+<p><code>HttpClient</code>的输入是一个<code>Entity</code>，输出也是一个<code>Entity</code>。对于<code>Entity</code>，<code>HttpClient</code>提供给我们一个工具类<code>EntityUtils</code>，使用它可以很方便的将其转换为字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CloseableHttpResponse response = httpclient.execute(request);</span><br><span class="line">String responseBody = EntityUtils.toString(response.getEntity());</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -411,7 +403,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/" title="搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee" target="_blank" rel="external">http://yoursite.com/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/</a>
+      <a href="http://yoursite.com/2018/11/27/ssl双向认证（一）：HttpClient的使用/" title="ssl双向认证（一）：HttpClient的使用" target="_blank" rel="external">http://yoursite.com/2018/11/27/ssl双向认证（一）：HttpClient的使用/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -457,13 +449,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/11/27/ssl双向认证（一）：HttpClient的使用/" title="ssl双向认证（一）：HttpClient的使用"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/11/25/搭建hexo博客（二）：搭建hexo环境/" title="搭建hexo博客（二）：搭建hexo环境"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/" title="搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
