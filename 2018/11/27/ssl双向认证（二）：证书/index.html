@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>搭建hexo博客（二）：搭建hexo环境 | Hexo</title>
-  <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  环境搭建准备工作 下载node.js并安装（官网下载安装）,默认会安装npm。  下载安装git（官网下载安装）。   安装hexo hexo官网（https://hexo.io）  设置npm镜像源为淘宝镜像，从国外镜像源下载很容易失败 1npm">
-<meta name="keywords" content="hexo">
+  <title>ssl双向认证（二）：证书 | Hexo</title>
+  <meta name="description" content="数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。  证书介绍SSL简介SSL - Secure Sockets Layer，简称TLS，习惯问题叫SSL比较多。 http协议默认情况下是不加">
+<meta name="keywords" content="httpclient,ssl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建hexo博客（二）：搭建hexo环境">
-<meta property="og:url" content="http://yoursite.com/2018/11/25/搭建hexo博客（二）：搭建hexo环境/index.html">
+<meta property="og:title" content="ssl双向认证（二）：证书">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/ssl双向认证（二）：证书/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  环境搭建准备工作 下载node.js并安装（官网下载安装）,默认会安装npm。  下载安装git（官网下载安装）。   安装hexo hexo官网（https://hexo.io）  设置npm镜像源为淘宝镜像，从国外镜像源下载很容易失败 1npm">
+<meta property="og:description" content="数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。  证书介绍SSL简介SSL - Secure Sockets Layer，简称TLS，习惯问题叫SSL比较多。 http协议默认情况下是不加">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T08:44:54.638Z">
+<meta property="og:updated_time" content="2018-11-28T14:05:19.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建hexo博客（二）：搭建hexo环境">
-<meta name="twitter:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  环境搭建准备工作 下载node.js并安装（官网下载安装）,默认会安装npm。  下载安装git（官网下载安装）。   安装hexo hexo官网（https://hexo.io）  设置npm镜像源为淘宝镜像，从国外镜像源下载很容易失败 1npm">
+<meta name="twitter:title" content="ssl双向认证（二）：证书">
+<meta name="twitter:description" content="数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。  证书介绍SSL简介SSL - Secure Sockets Layer，简称TLS，习惯问题叫SSL比较多。 http协议默认情况下是不加">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2018/11/25/搭建hexo博客（二）：搭建hexo环境/index.html">
+  <link rel="canonical" href="http://yoursite.com/2018/11/27/ssl双向认证（二）：证书/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -336,14 +336,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-搭建hexo博客（二）：搭建hexo环境" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="post-ssl双向认证（二）：证书" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      搭建hexo博客（二）：搭建hexo环境
+      ssl双向认证（二）：证书
     </h1>
   
 
@@ -351,85 +351,46 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/11/25/搭建hexo博客（二）：搭建hexo环境/" class="article-date">
-	  <time datetime="2018-11-25T03:23:10.000Z" itemprop="datePublished">2018-11-25</time>
+	<a href="/2018/11/27/ssl双向认证（二）：证书/" class="article-date">
+	  <time datetime="2018-11-27T13:59:49.000Z" itemprop="datePublished">2018-11-27</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/环境/">环境</a>
+    <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/java/">java</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/hexo/">hexo</a>
+	<a class="article-tag-link" href="/tags/httpclient/">httpclient</a>, <a class="article-tag-link" href="/tags/ssl/">ssl</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/25/搭建hexo博客（二）：搭建hexo环境/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/27/ssl双向认证（二）：证书/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。</p>
 </blockquote>
-<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li><p>下载node.js并安装（官网下载安装）,默认会安装npm。</p>
-</li>
-<li><p>下载安装git（官网下载安装）。</p>
-</li>
-</ul>
-<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><ol>
-<li><p>hexo官网（<a href="https://hexo.io）" target="_blank" rel="noopener">https://hexo.io）</a></p>
-</li>
-<li><p>设置npm镜像源为淘宝镜像，从国外镜像源下载很容易失败</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>hexo安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>hexo的基本使用可查看官网文档或者官方示例<code>hello-world</code></p>
-<h4 id="本地搭建hexo静态博客"><a href="#本地搭建hexo静态博客" class="headerlink" title="本地搭建hexo静态博客"></a>本地搭建hexo静态博客</h4><ol>
-<li><p>新建一个文件夹，如<code>blog</code></p>
-</li>
-<li><p>进入该文件夹内，右键运行<code>cmd</code>，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化后，文件夹的目录如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy       # 需要部署的文件</span><br><span class="line">├── node_modules  # Hexo插件</span><br><span class="line">├── public        # 生成的静态网页文件</span><br><span class="line">├── scaffolds     # 模板</span><br><span class="line">├── source        # 博客正文和其他源文件等都应该放在这里</span><br><span class="line">|   ├── _drafts   # 草稿</span><br><span class="line">|   └── _posts    # 文章</span><br><span class="line">├── themes        # 主题</span><br><span class="line">├── _config.yml   # 全局配置文件</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>加载node依赖</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地运行，即可访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> hexo首页</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h4><ol>
-<li><p>在<code>github</code>上创建名为<code>xxx.github.io</code>的项目，<code>xxx</code>为自己的<code>github</code>用户名</p>
-</li>
-<li><p>打开本地的<code>blog</code>文件夹项目内的<code>_config.yml</code>的配置文件，将其中的<code>type</code>设置为<code>git</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:liu253928127/liu253928127.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装<code>deploy</code>插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地生成静态文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将本地静态文件推送至<code>github</code>,或者生成和部署一行命令<code>hexo g --d</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问<code>http://xxx.github.io</code>就能看到刚刚本地部署的静态网页</p>
-</li>
-</ol>
+<h3 id="证书介绍"><a href="#证书介绍" class="headerlink" title="证书介绍"></a>证书介绍</h3><h4 id="SSL简介"><a href="#SSL简介" class="headerlink" title="SSL简介"></a>SSL简介</h4><p><strong>SSL</strong> - <code>Secure Sockets Layer</code>，简称<code>TLS</code>，习惯问题叫<code>SSL</code>比较多。</p>
+<p><code>http</code>协议默认情况下是不加密内容的，这样就很可能在内容传播的时候被别人监听到，对于安全性要求较高的场合，必须要加密，<code>https</code>就是带加密的<code>http</code>协议，而<code>https</code>的加密是基于SSL的。</p>
+<p><strong>OpenSSL</strong> - 简单地说，<code>OpenSSL</code>是<code>SSL</code>的一个实现，<code>SSL</code>只是一种规范。</p>
+<h4 id="证书标准"><a href="#证书标准" class="headerlink" title="证书标准"></a>证书标准</h4><p><strong>PKCS证书</strong> - <code>Public-Key Cryptography Standards</code>，是由 RSA 实验室与其它安全系统开发商为促进公钥密码的发展而制订的一系列标准。<code>X.509</code>是常见通用的证书格式。</p>
+<p><strong>X.509</strong> - 这是一种证书标准，主要定义了证书中应该包含哪些内容。</p>
+<h4 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h4><blockquote>
+<p>同样的<code>X.509</code>证书，可能有不同的编码格式，目前有以下两种编码格式。</p>
+</blockquote>
+<p><strong>PEM</strong> - <code>Privacy Enhanced Mail</code>，文本格式，<code>---BEGIN---</code>开头，<code>---END---</code>结尾，内容是<code>BASE64</code>编码。</p>
+<p>Apache和*NIX服务器偏向于使用这种编码格式。</p>
+<p><strong>DER</strong> - <code>Distinguished Encoding Rules</code>，二进制格式，不可读。</p>
+<p>Java和Windows服务器偏向于使用这种编码格式。</p>
 
       
     </div>
@@ -439,7 +400,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2018/11/25/搭建hexo博客（二）：搭建hexo环境/" title="搭建hexo博客（二）：搭建hexo环境" target="_blank" rel="external">http://yoursite.com/2018/11/25/搭建hexo博客（二）：搭建hexo环境/</a>
+      <a href="http://yoursite.com/2018/11/27/ssl双向认证（二）：证书/" title="ssl双向认证（二）：证书" target="_blank" rel="external">http://yoursite.com/2018/11/27/ssl双向认证（二）：证书/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -485,13 +446,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/11/25/搭建hexo博客（三）：同时部署多个托管网站hexo-github-gitee/" title="搭建hexo博客（三）：同时部署多个托管网站hexo+github+gitee"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/11/25/搭建hexo博客（一）：写在前面/" title="搭建hexo博客（一）：写在前面"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/11/27/ssl双向认证（一）：HttpClient的使用/" title="ssl双向认证（一）：HttpClient的使用"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
