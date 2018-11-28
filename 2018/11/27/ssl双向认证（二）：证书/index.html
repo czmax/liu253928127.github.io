@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。  证书介绍SSL简介 SSL - Secure Sockets Layer，简称TLS，习惯问题叫SSL比较多。  http协议默认情况下是">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-28T14:06:32.034Z">
+<meta property="og:updated_time" content="2018-11-28T14:09:34.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssl双向认证（二）：证书">
 <meta name="twitter:description" content="数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。  证书介绍SSL简介 SSL - Secure Sockets Layer，简称TLS，习惯问题叫SSL比较多。  http协议默认情况下是">
@@ -379,29 +379,27 @@
         <blockquote>
 <p>数字证书（或简称证书）是在 Internet 上唯一地标识人员和资源的电子文件。证书使两个实体之间能够进行安全、保密的通信。证书有很多种类型，例如个人证书（由个人使用）和服务器证书（用于通过安全套接字层 [SSL] 技术在服务器和客户机之间建立安全会话）。</p>
 </blockquote>
-<h3 id="证书介绍"><a href="#证书介绍" class="headerlink" title="证书介绍"></a>证书介绍</h3><h4 id="SSL简介"><a href="#SSL简介" class="headerlink" title="SSL简介"></a>SSL简介</h4><ul>
-<li><strong>SSL</strong> - <code>Secure Sockets Layer</code>，简称<code>TLS</code>，习惯问题叫<code>SSL</code>比较多。</li>
-</ul>
-<p><code>http</code>协议默认情况下是不加密内容的，这样就很可能在内容传播的时候被别人监听到，对于安全性要求较高的场合，必须要加密，<code>https</code>就是带加密的<code>http</code>协议，而<code>https</code>的加密是基于SSL的。</p>
-<ul>
-<li><strong>OpenSSL</strong> - 简单地说，<code>OpenSSL</code>是<code>SSL</code>的一个实现，<code>SSL</code>只是一种规范。</li>
-</ul>
-<h4 id="证书标准"><a href="#证书标准" class="headerlink" title="证书标准"></a>证书标准</h4><ul>
-<li><p><strong>PKCS证书</strong> - <code>Public-Key Cryptography Standards</code>，是由 RSA 实验室与其它安全系统开发商为促进公钥密码的发展而制订的一系列标准。<code>X.509</code>是常见通用的证书格式。</p>
-</li>
-<li><p><strong>X.509</strong> - 这是一种证书标准，主要定义了证书中应该包含哪些内容。</p>
-</li>
-</ul>
-<h4 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h4><blockquote>
-<p>同样的<code>X.509</code>证书，可能有不同的编码格式，目前有以下两种编码格式。</p>
+<h3 id="证书介绍"><a href="#证书介绍" class="headerlink" title="证书介绍"></a>证书介绍</h3><h4 id="SSL简介"><a href="#SSL简介" class="headerlink" title="SSL简介"></a>SSL简介</h4><blockquote>
+<p><strong>SSL</strong> - <code>Secure Sockets Layer</code>，简称<code>TLS</code>，习惯问题叫<code>SSL</code>比较多。</p>
 </blockquote>
-<ul>
-<li><strong>PEM</strong> - <code>Privacy Enhanced Mail</code>，文本格式，<code>---BEGIN---</code>开头，<code>---END---</code>结尾，内容是<code>BASE64</code>编码。</li>
-</ul>
+<p><code>http</code>协议默认情况下是不加密内容的，这样就很可能在内容传播的时候被别人监听到，对于安全性要求较高的场合，必须要加密，<code>https</code>就是带加密的<code>http</code>协议，而<code>https</code>的加密是基于SSL的。</p>
+<blockquote>
+<p><strong>OpenSSL</strong> - 简单地说，<code>OpenSSL</code>是<code>SSL</code>的一个实现，<code>SSL</code>只是一种规范。</p>
+</blockquote>
+<h4 id="证书标准"><a href="#证书标准" class="headerlink" title="证书标准"></a>证书标准</h4><blockquote>
+<p><strong>PKCS证书</strong> - <code>Public-Key Cryptography Standards</code>，是由 RSA 实验室与其它安全系统开发商为促进公钥密码的发展而制订的一系列标准。<code>X.509</code>是常见通用的证书格式。</p>
+</blockquote>
+<blockquote>
+<p><strong>X.509</strong> - 这是一种证书标准，主要定义了证书中应该包含哪些内容。</p>
+</blockquote>
+<h4 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h4><pre><code>同样的`X.509`证书，可能有不同的编码格式，目前有以下两种编码格式。
+</code></pre><blockquote>
+<p><strong>PEM</strong> - <code>Privacy Enhanced Mail</code>，文本格式，<code>---BEGIN---</code>开头，<code>---END---</code>结尾，内容是<code>BASE64</code>编码。</p>
+</blockquote>
 <p>Apache和*NIX服务器偏向于使用这种编码格式。</p>
-<ul>
-<li><strong>DER</strong> - <code>Distinguished Encoding Rules</code>，二进制格式，不可读。</li>
-</ul>
+<blockquote>
+<p><strong>DER</strong> - <code>Distinguished Encoding Rules</code>，二进制格式，不可读。</p>
+</blockquote>
 <p>Java和Windows服务器偏向于使用这种编码格式。</p>
 
       
