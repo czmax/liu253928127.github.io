@@ -336,7 +336,8 @@
             <blockquote>
 <p>SSL认证是指客户端到服务器端的认证。主要用来提供对用户和服务器的认证；对传送的数据进行加密和隐藏；确保数据在传送中不被改变，即数据的完整性，现已成为该领域中全球化的标准。</p>
 </blockquote>
-<h4 id="HTTPS-单向认证"><a href="#HTTPS-单向认证" class="headerlink" title="HTTPS 单向认证"></a><code>HTTPS</code> 单向认证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Client -&gt; Server: ①Client Hello(随机数，支持的加密算法)</span><br><span class="line">Server --&gt; Client: ②Server Hello(随机数，选择一个client支持的算法)</span><br><span class="line">Server --&gt; Client: ②Server证书</span><br><span class="line">note left of Client: ③验证证书</span><br><span class="line">Client -&gt; Server: ④Client key Exchange(用Server公钥加密)</span><br><span class="line">Client -&gt; Server: ④Change cipher Spec(通知Server参数协商完成)</span><br><span class="line">Client -&gt; Server: ④Finish handshake(Encrypted handshake message)</span><br><span class="line">Server --&gt; Client: ⑤cipher spec + Finish handshake</span><br><span class="line">note left of Client: 开始传输</span><br><span class="line">Client -&gt; Server: ⑥开始使用协商密钥与算法进行加密通信</span><br></pre></td></tr></table></figure>
+<h4 id="HTTPS-单向认证"><a href="#HTTPS-单向认证" class="headerlink" title="HTTPS 单向认证"></a><code>HTTPS</code> 单向认证</h4><div id="sequence-0"></div>
+
 <p>流程：</p>
 <p>①    <strong><code>Client Hello</code></strong>:  <strong>客户端</strong>的浏览器向<strong>服务器</strong>传送客户端 <code>SSL</code> 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种讯息。</p>
 <p>②    <strong><code>Server Hello</code></strong>:  <strong>服务器</strong>向<strong>客户端</strong>传送 <code>SSL</code> 协议的版本号，客户端支持的加密算法，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。</p>
@@ -346,7 +347,8 @@
 <p>​    <strong><code>Encrypted handshake message</code></strong>:  <strong>客户端</strong>结合之前所有通信参数的hash值与其他相关信息生成一段数据，采用协商session secret 与算法进行加密，然后发送给服务器用于数据与握手验证。</p>
 <p>⑤    <strong><code>cipher spec + Finish handshake</code></strong>:  验证通过之后，服务器接收到浏览器送过来的消息，用自己的私钥解密，获得通话密钥。<strong>服务器</strong>同样发送 <code>change_cipher_spec</code> 以告知客户端后续的通信都采用协商的密钥与算法进行加密通信。</p>
 <p>⑥    开始使用协商密钥与算法进行加密通信。</p>
-<h4 id="HTTPS-双向认证"><a href="#HTTPS-双向认证" class="headerlink" title="HTTPS 双向认证"></a><code>HTTPS</code> 双向认证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Client -&gt; Server: ①Client Hello(随机数，支持的加密算法)</span><br><span class="line">Server --&gt; Client: ②Server Hello(随机数，选择一个client支持的算法)</span><br><span class="line">Server --&gt; Client: ②Server证书</span><br><span class="line">note left of Client: ③验证证书</span><br><span class="line">Client -&gt; Server: ④Client key Exchange(用Server公钥加密)</span><br><span class="line">Client -&gt; Server: ④Change cipher Spec(通知Server参数协商完成)</span><br><span class="line">Client -&gt; Server: ④Finish handshake(Encrypted handshake message)</span><br><span class="line">Client -&gt; Server: ④Client证书</span><br><span class="line">note right of Server: ⑤验证证书</span><br><span class="line">Server --&gt; Client: ⑥Change cipher Spec(通知Server参数协商完成)</span><br><span class="line">Server --&gt; Client: ⑥Finish handshake(Encrypted handshake message)</span><br><span class="line"></span><br><span class="line">note left of Client: 开始传输</span><br><span class="line">Client -&gt; Server: ⑦开始使用协商密钥与算法进行加密通信</span><br></pre></td></tr></table></figure>
+<h4 id="HTTPS-双向认证"><a href="#HTTPS-双向认证" class="headerlink" title="HTTPS 双向认证"></a><code>HTTPS</code> 双向认证</h4><div id="flowchart-0" class="flow-chart"></div>
+
 <p>流程：</p>
 <p>①    <strong><code>Client Hello</code></strong>:  <strong>客户端</strong>的浏览器向<strong>服务器</strong>传送客户端 <code>SSL</code> 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种讯息。</p>
 <p>②    <strong><code>Server Hello</code></strong>:  <strong>服务器</strong>向<strong>客户端</strong>传送 <code>SSL</code> 协议的版本号，客户端支持的加密算法，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。</p>
@@ -362,7 +364,29 @@
 <ul>
 <li><p><a href="http://edison0663.iteye.com/blog/996526" target="_blank" rel="noopener">ssl双向认证和单向认证原理</a></p>
 </li>
-<li><p><a href="https://blog.csdn.net/ustccw/article/details/76691248" target="_blank" rel="noopener">SSL/TLS 双向认证(一) – SSL/TLS工作原理</a></p>
+<li><p><a href="https://blog.csdn.net/ustccw/article/details/76691248" target="_blank" rel="noopener">SSL/TLS 双向认证(一) – SSL/TLS工作原理</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">Client -> Server: ①Client Hello(随机数，支持的加密算法)
+Server --> Client: ②Server Hello(随机数，选择一个client支持的算法)
+Server --> Client: ②Server证书
+note left of Client: ③验证证书
+Client -> Server: ④Client key Exchange(用Server公钥加密)
+Client -> Server: ④Change cipher Spec(通知Server参数协商完成)
+Client -> Server: ④Finish handshake(Encrypted handshake message)
+Client -> Server: ④Client证书
+note right of Server: ⑤验证证书
+Server --> Client: ⑥Change cipher Spec(通知Server参数协商完成)
+Server --> Client: ⑥Finish handshake(Encrypted handshake message)
+
+note left of Client: 开始传输
+Client -> Server: ⑦开始使用协商密钥与算法进行加密通信</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js"></script><script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script><script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdn.bootcss.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">Client -> Server: ①Client Hello(随机数，支持的加密算法)
+Server --> Client: ②Server Hello(随机数，选择一个client支持的算法)
+Server --> Client: ②Server证书
+note left of Client: ③验证证书
+Client -> Server: ④Client key Exchange(用Server公钥加密)
+Client -> Server: ④Change cipher Spec(通知Server参数协商完成)
+Client -> Server: ④Finish handshake(Encrypted handshake message)
+Server --> Client: ⑤cipher spec + Finish handshake
+note left of Client: 开始传输
+Client -> Server: ⑥开始使用协商密钥与算法进行加密通信</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 </li>
 </ul>
 
